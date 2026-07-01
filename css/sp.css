@@ -1,0 +1,227 @@
+/* ===== スマホ専用スタイル（max-width: 768px） ===== */
+@media (max-width: 768px) {
+
+  /* === 文字サイズ底上げ（40代以降向け・読みやすさ優先） === */
+  body { font-size: 16.5px; line-height: 1.95; }
+  /* 本文・段落系 */
+  .hero-sub { font-size: 15.5px; line-height: 1.9; }
+  .strength-text { font-size: 15.5px; }
+  .kodawari-text,
+  .president-text,
+  .about-lead p,
+  .paint-type-text,
+  .process-step-content p,
+  .included-box ul li,
+  .flow-step-desc,
+  .blog-post-excerpt,
+  .recruit-note,
+  .recruit-table td,
+  .company-table td { font-size: 15.5px; line-height: 1.9; }
+  /* フォーム */
+  .form-label { font-size: 16px; }
+  .form-checkboxes label { font-size: 16px; }
+  .form-field input,
+  .form-field textarea { font-size: 16px; }
+  .form-field .hint { font-size: 13px; }
+  .form-count { font-size: 13px; }
+  /* 説明・キャプション・日付 */
+  .section-title .sub { font-size: 13.5px; }
+  .work-date, .blog-post-date, .mini-post-body .date { font-size: 12.5px; }
+  .work-title, .blog-post-title { font-size: 15.5px; }
+  .mini-post-body .title { font-size: 15px; }
+  .mini-post-body .excerpt { font-size: 13.5px; }
+  /* フッター */
+  .footer-area { font-size: 13px; line-height: 2; }
+  .footer-address { font-size: 13px; }
+  .footer-nav { font-size: 13.5px; }
+  .footer-copy { font-size: 12px; }
+  /* ボタン類 */
+  .btn { font-size: 15.5px; }
+  .floating-cta-tel, .floating-cta-web { font-size: 15px; }
+
+  /* ヘッダー（ロゴ中央・ハンバーガー右端） */
+  .header-inner {
+    height: 64px;
+    padding: 0 16px;
+    justify-content: center;
+  }
+  .header-nav-left,
+  .header-nav-right { display: none; }
+  .header-tel { display: none; }
+  /* スマホはナビが隠れるので、ロゴを絶対中央配置（重なりは起きない） */
+  .site-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
+  .site-logo .logo-sub { font-size: 0.56rem; gap: 7px; }
+  .site-logo .logo-sub::before, .site-logo .logo-sub::after { width: 12px; }
+  .site-logo .logo-main { font-size: 1.32rem; }
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* ヒーロー（スマホ画面いっぱいの高さに：ヘッダー64pxを除いた残り全部） */
+  .hero {
+    height: calc(100svh - 64px);
+    min-height: 480px;
+    max-height: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .hero-overlay { background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.35) 100%); }
+  .hero-content {
+    margin: 0 16px;
+    max-width: none;
+    width: calc(100% - 32px);
+    padding: 26px 22px;
+  }
+  .hero-script { font-size: 1.1rem; }
+  .hero-catch { font-size: 1.3rem; line-height: 1.8; }
+  .hero-sub { font-size: 15.5px; line-height: 1.9; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 14px; }
+  .hero-actions .btn { text-align: center; }
+  .hero-tel { align-items: center; }
+
+  /* セクション */
+  .section { padding: 48px 16px; }
+  .section-title .en { font-size: 1.6rem; }
+  .section-title .ja { font-size: 1rem; }
+
+  /* 施工事例グリッド */
+  .works-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+  /* 3つのこだわり（縦積み） */
+  .kodawari-rows { gap: 40px; }
+  .kodawari-row { grid-template-columns: 1fr; gap: 18px; }
+  .kodawari-row.reverse .kodawari-photo { order: 0; }
+  .kodawari-photo-inner { aspect-ratio: 16 / 11; }
+  .strengths-watermark { font-size: 5rem; top: 12px; right: 4px; }
+  .kodawari-num { font-size: 2.8rem; }
+  .kodawari-h { font-size: 1.2rem; }
+  .kodawari-p { font-size: 15.5px; }
+
+  /* ページヘッダー */
+  .page-header { height: 160px; }
+  .page-header-content { padding: 0 20px 24px; }
+  .page-header-content .page-title-ja { font-size: 1.4rem; }
+  .page-header-photo { height: 140px; }
+
+  /* お問い合わせ（への字の折れ目はスマホでは浅く） */
+  .contact-section { clip-path: polygon(0 36px, 50% 0, 100% 36px, 100% 100%, 0 100%); padding-top: 64px; }
+  .contact-heading .en { font-size: 2.3rem; }
+  .contact-worker-img { display: none; }
+  .contact-form { padding: 22px 16px; }
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+  }
+  .form-label {
+    width: 100%;
+    padding-top: 0;
+    font-weight: 500;
+  }
+  .form-field { width: 100%; }
+  /* チェックボックスを縦並び・横幅いっぱいに（崩れ防止） */
+  .form-checkboxes { flex-direction: column; gap: 0; width: 100%; }
+  .form-checkboxes label {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #dde8ec;
+    border-radius: 8px;
+    background: #fafcfd;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .form-checkboxes label + label { margin-top: 8px; }
+  .form-field input,
+  .form-field textarea { font-size: 16px; } /* iOSの自動ズーム防止 */
+  .contact-tel-btn { font-size: 1.05rem; padding: 15px 24px; max-width: 100%; justify-content: center; }
+  /* 見出しを確実に中央に（各行をブロック化して中央揃え） */
+  .contact-heading { width: 100%; text-align: center; }
+  .contact-heading .en,
+  .contact-heading .ja,
+  .contact-heading .desc {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .contact-heading .en { font-size: 2rem; }
+  .contact-heading .ja { font-size: 1.15rem; }
+
+  /* フッター上部 */
+  .footer-top { grid-template-columns: 1fr; gap: 32px; padding: 40px 16px; }
+
+  /* フッター（電話＋対応エリアを縦積み） */
+  .footer-logo .logo-main { font-size: 1.7rem; letter-spacing: 0.22em; }
+  .footer-contact-row { flex-direction: column; gap: 22px; align-items: stretch; }
+  .footer-area-box { max-width: 100%; }
+  .footer-tel { font-size: 1.7rem; }
+  /* スマホはメニューを2行に折り返す */
+  .footer-nav { font-size: 0.92rem; gap: 6px 0; }
+  .footer-nav a { padding: 4px 16px; }
+  .footer-nav-break { display: block; flex-basis: 100%; width: 100%; height: 0; }
+  .footer-nav a:nth-child(3)::after { display: none; }
+  /* ブログ/お知らせの画像サイズ調整 */
+  .mini-post-img { width: 100px; height: 72px; }
+
+  /* aboutページ */
+  .president-section { grid-template-columns: 1fr; padding: 24px; }
+  /* 顔が見える安心感 */
+  .trust-section { flex-direction: column; gap: 36px; }
+  .trust-photo { width: 230px; height: 230px; margin: 0 auto; }
+  .trust-bubble { right: -6px; top: 0; font-size: 0.82rem; padding: 11px 15px; }
+  .trust-heading { font-size: 1.35rem; text-align: center; line-height: 1.6; }
+  .trust-text { font-size: 15.5px; line-height: 1.95; }
+  .trust-btn { text-align: center; }
+  .kodawari-item { grid-template-columns: 1fr; }
+  .kodawari-item.reverse { direction: ltr; }
+  .staff-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* planページ */
+  .paint-types { grid-template-columns: repeat(2, 1fr); }
+  .process-step { grid-template-columns: 52px 1fr; }
+  .process-step-img { display: none; }
+  .flow-steps { grid-template-columns: 1fr; gap: 4px; }
+  .included-grid { grid-template-columns: 1fr; }
+
+  /* worksページ */
+  .works-list { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  /* blogページ */
+  .blog-layout { grid-template-columns: 1fr; padding: 40px 16px; }
+  .blog-post-item { grid-template-columns: 1fr; }
+  .blog-post-img { width: 100%; height: 180px; }
+
+  /* recruitページ */
+  .worker-photos { gap: 16px; }
+  .worker-photo-item { width: 120px; height: 120px; }
+  .recruit-table th { width: 110px; font-size: 0.8rem; }
+
+  /* フローティングCTA */
+  .floating-cta { display: grid; }
+  body { padding-bottom: 56px; }
+
+  /* 会社概要テーブル */
+  .company-table th { width: 110px; font-size: 0.8rem; display: block; width: 100%; }
+  .company-table td { display: block; padding: 8px 16px 16px; }
+  .company-table tr { display: block; border-bottom: 1px solid #eee; }
+}
+
+@media (max-width: 480px) {
+  .works-grid { grid-template-columns: 1fr; }
+  .paint-types { grid-template-columns: 1fr; }
+  .staff-grid { grid-template-columns: repeat(2, 1fr); }
+  .works-list { grid-template-columns: 1fr; }
+  .worker-photos { gap: 12px; }
+  .worker-photo-item { width: 100px; height: 100px; }
+}
